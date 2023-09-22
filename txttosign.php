@@ -73,8 +73,6 @@ if (empty($_SESSION['email'])) {
             <br>
             <button type="submit" formaction="process.php">Convert to Sign Language</button>
             <button type="submit" formaction="dynamic.php">Dynamic Sign Language</button>
-            <button type="submit" formaction="Tbraille.php">Convert to Braille Language</button>
-            <button type="submit" formaction="dynamicB.php">Dynamic Braille Language</button>
         </form>
     </div>
 
