@@ -113,8 +113,9 @@
         <div class="content flex flex-col">
                 <h1 class="text-xl text-bold">Welcome to Sign & Braille Language Detection System</h1>
                 <div class="mt-4">
-                    <button id="convertToTextBtn" class="mt-2 rounded-xl font-bold bg-blue-400 p-3">Convert Text to Sign</button>
+                    <button id="convertToTextBtn" class="mt-2 rounded-xl font-bold bg-blue-400 p-3">Convert Text to Sign or Braille</button>
                     <button id="convertToSignBtn" class="mt-2 rounded-xl font-bold bg-blue-400 p-3">Convert Sign to Text</button>
+                    <button id="convertTobrlBtn" class="mt-2 rounded-xl font-bold bg-blue-400 p-3">Convert Braille to Text</button>
                 </div>
             </div>
             <div>
@@ -139,7 +140,9 @@
     convertToSignBtn.addEventListener("click", function() {
       window.location.href = "predict.php";
     });
-
+    convertTobrlBtn.addEventListener("click", function() {
+      window.location.href = "brl.php";
+    });
 
     </script>
 </body>
