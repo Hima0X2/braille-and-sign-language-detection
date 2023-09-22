@@ -113,7 +113,8 @@
         <div class="content flex flex-col">
                 <h1 class="text-xl text-bold">Welcome to Sign & Braille Language Detection System</h1>
                 <div class="mt-4">
-                    <button id="convertToTextBtn" class="mt-2 rounded-xl font-bold bg-blue-400 p-3">Convert Text to Sign or Braille</button>
+                    <button id="convertToTextBtn" class="mt-2 rounded-xl font-bold bg-blue-400 p-3">Convert Text to Sign</button>
+                    <button id="convertTobralBtn" class="mt-2 rounded-xl font-bold bg-blue-400 p-3">Convert Text to Braille</button>
                     <button id="convertToSignBtn" class="mt-2 rounded-xl font-bold bg-blue-400 p-3">Convert Sign to Text</button>
                     <button id="convertTobrlBtn" class="mt-2 rounded-xl font-bold bg-blue-400 p-3">Convert Braille to Text</button>
                 </div>
@@ -136,7 +137,9 @@
     convertToTextBtn.addEventListener("click", function() {
       window.location.href = "txttosign.php";
     });
-
+    convertTobralBtn.addEventListener("click", function() {
+      window.location.href = "Tbraille.php";
+    });
     convertToSignBtn.addEventListener("click", function() {
       window.location.href = "predict.php";
     });
