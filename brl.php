@@ -101,6 +101,18 @@
             margin-top: 20px;
             text-align: center;
         }
+
+        /* Braille keyboard styles */
+        #braille-keyboard {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .braille-char {
+            font-size: 24px;
+            padding: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -110,6 +122,46 @@
         <input type="text" id="braille" name="braille" placeholder="⠑⠝⠞⠑⠗ ⠽⠕⠥⠗ ⠞⠑⠭⠞ ⠓⠑⠗⠑" required>
         <input type="submit" value="Convert">
     </form>
+    
+    
+<div id="braille-keyboard">
+    <!-- Column 1 -->
+    <div class="braille-column">
+        <button class="braille-char" data-braille="⠁">⠁</button>
+        <button class="braille-char" data-braille="⠃">⠃</button>
+        <button class="braille-char" data-braille="⠉">⠉</button>
+        <button class="braille-char" data-braille="⠙">⠙</button>
+        <button class="braille-char" data-braille="⠑">⠑</button>
+        <button class="braille-char" data-braille="⠋">⠋</button>
+        <button class="braille-char" data-braille="⠛">⠛</button>
+        <button class="braille-char" data-braille="⠓">⠓</button>
+    </div>
+    <!-- Column 2 -->
+    <div class="braille-column">
+        <button class="braille-char" data-braille="⠊">⠊</button>
+        <button class="braille-char" data-braille="⠚">⠚</button>
+        <button class="braille-char" data-braille="⠅">⠅</button>
+        <button class="braille-char" data-braille="⠇">⠇</button>
+        <button class="braille-char" data-braille="⠍">⠍</button>
+        <button class="braille-char" data-braille="⠝">⠝</button>
+        <button class="braille-char" data-braille="⠕">⠕</button>
+        <button class="braille-char" data-braille="⠏">⠏</button>
+    </div>
+    <!-- Column 3 -->
+    <div class="braille-column">
+        <button class="braille-char" data-braille="⠟">⠟</button>
+        <button class="braille-char" data-braille="⠗">⠗</button>
+        <button class="braille-char" data-braille="⠎">⠎</button>
+        <button class="braille-char" data-braille="⠞">⠞</button>
+        <button class="braille-char" data-braille="⠥">⠥</button>
+        <button class="braille-char" data-braille="⠧">⠧</button>
+        <button class="braille-char" data-braille="⠺">⠺</button>
+        <button class="braille-char" data-braille="⠭">⠭</button>
+        <button class="braille-char" data-braille="⠽">⠽</button>
+        <button class="braille-char" data-braille="⠵">⠵</button>
+        <button class="braille-char" data-braille=" "> </button>
+    </div>
+</div>
     <?php
     function brailleToText($braille) {
         $brailleMapping = array(
@@ -145,5 +197,18 @@
         echo '</div>';
     }
     ?>
+
+    <script>
+        // JavaScript to handle Braille character buttons
+        const brailleChars = document.querySelectorAll('.braille-char');
+        const brailleInput = document.getElementById('braille');
+
+        brailleChars.forEach((charButton) => {
+            charButton.addEventListener('click', () => {
+                const brailleChar = charButton.getAttribute('data-braille');
+                brailleInput.value += brailleChar;
+            });
+        });
+    </script>
 </body>
 </html>
